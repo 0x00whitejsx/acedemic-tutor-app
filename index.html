@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERACTIVE LEARNING SYSTEM MAU-COLAB</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #D07348;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+        #loader {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D07348;
+        }
+        #loader .circle-loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #D07348;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #loader img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        iframe {
+            flex-grow: 1;
+            width: 100%;
+            border: none;
+            display: none; /* Hide iframe initially */
+        }
+        h3{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <header>INTERACTIVE LEARNING SYSTEM  -  MAU-COLAB
+        
+    </header>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="circle-loader">
+            <img src="./logo.jpg" alt="Loading..." />
+           
+        </div>
+        <h3>Learn with our interactive portal (English, mathematics, Chmemistry and Agriculture )</h3>
+    </div>
+
+    <!-- Iframe -->
+    <iframe id="whiteboardIframe" src="https://demo.whiteboard.agora.io/?region=us-sv" allowfullscreen></iframe>
+
+    <script>
+        // Wait for iframe to load completely
+        const iframe = document.getElementById('whiteboardIframe');
+        const loader = document.getElementById('loader');
+
+        iframe.onload = function() {
+            loader.style.display = 'none';  // Hide loader
+            iframe.style.display = 'block'; // Show iframe
+        };
+    </script>
+</body>
+</html>

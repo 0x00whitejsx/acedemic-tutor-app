@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Learning Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .path-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .path {
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      padding: 15px;
+      width: calc(50% - 20px);
+      background-color: #e9ffe9;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .path:hover {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 50px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* Media Queries */
+    @media (max-width: 600px) {
+      .path {
+        width: 100%; /* Full width for small screens */
+      }
+
+      h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+      }
+
+      p {
+        font-size: 1rem; /* Adjust paragraph size */
+      }
+
+      .footer {
+        font-size: 0.8rem; /* Smaller footer text */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    <h1>Welcome to Your Learning Dashboard</h1>
+    <p>Select your learning path:</p>
+
+    <div class="path-options">
+      <a href="mathematics.html" class="path">Mathematics</a>
+      <a href="english.html" class="path">English</a>
+      <a href="agriculture.html" class="path">Agriculture</a>
+      <a href="chemistry.html" class="path">Chemistry</a>
+      <a href="index.html" class="path">Interactive learning</a>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 Learning Platform. All rights reserved.</p>
+    </div>
+  </div>
+
+</body>
+</html>
